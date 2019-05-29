@@ -5,9 +5,9 @@ class Clock extends Item{
   }
   
   void checkCollision(Player player){
-    if(player.health < player.PLAYER_MAX_HEALTH
+    if(gameTimer < GAME_INIT_TIMER
       && isHit(x, y, w, h, player.x, player.y, w, h)){
-        player.health ++;
+        addTime(15);
         x = y = -1000;
       }
   }
